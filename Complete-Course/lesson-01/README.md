@@ -69,7 +69,7 @@ If validation fails, `main()` returns `1` (nonzero exit status). If it succeeds,
 
 1. Configure/build the project in **Debug** mode using CMake Tools.
 2. Open `src/main.cpp` and set a breakpoint on `if (!hft::is_valid(order)) return 1;`.
-3. Launch **CMake: Debug**. In the original learning setup, this command was bound to **Shift+F5**; check your own keybindings rather than assuming they are universal.
+3. Launch **CMake: Debug** from the Command Palette. You can also use its assigned keyboard shortcut.
 4. Press **F11 (Step Into)** to enter `is_valid()` in `src/order.cpp`.
 5. Inspect `order.id`, `order.price_ticks`, and `order.quantity` in **Locals**.
 6. Use **F10 (Step Over)** to execute the current source-level step, or **Shift+F11 (Step Out)** to finish the current function.
