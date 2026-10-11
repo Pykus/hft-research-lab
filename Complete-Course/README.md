@@ -7,6 +7,7 @@ A practical, incremental course built around the **real source code** in this re
 | Lesson | Topic | Materials |
 | --- | --- | --- |
 | 01 | C++ order model, validation, and debugging | [Lesson](lesson-01/README.md) · [Exercises](lesson-01/EXERCISES.md) |
+| 02 | References, pointers, and object lifetime | [Lesson and exercises](lesson-02/README.md) |
 
 ## Learning workflow
 
