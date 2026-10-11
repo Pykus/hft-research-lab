@@ -37,3 +37,7 @@ ctest --test-dir build --output-on-failure
 5. Research hypotheses and controlled comparisons.
 
 The project intentionally starts small; features and research claims must be validated step by step.
+
+## Learn C++20 with this repository
+
+Follow the [HFT C++20 Complete Course](Complete-Course/README.md) for concise English lessons and practical exercises based on the actual project code. Start with [Lesson 01: Orders and Debugging](Complete-Course/lesson-01/README.md).
