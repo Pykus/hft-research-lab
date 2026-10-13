@@ -236,7 +236,7 @@ std::atomic<int> counter{0};
 
 void worker() {
     for (int i = 0; i < 100'000; ++i) {
-        counter.fetch_add(1, std::memory_order_relaxed);
+        counter += 1;
     }
 }
 
@@ -252,7 +252,7 @@ int main() {
 }
 ```
 
-`fetch_add` performs an atomic read-modify-write operation. Relaxed ordering is sufficient for this isolated counter because no other data is being published through it; the `join()` calls ensure the workers finish before the final read. Memory ordering requires a separate lesson.
+`std::atomic<int>` overloads `+=`, so `counter += 1` is an atomic read-modify-write operation, even when multiple threads execute it concurrently. Unlike `fetch_add(1, std::memory_order_relaxed)`, this shorthand uses the default sequentially consistent ordering (`std::memory_order_seq_cst`). Both approaches are correct for this independent counter. The `join()` calls ensure the workers finish before the final read. We will explain memory ordering in a later lesson.
 
 ## 11. Exercises
 
