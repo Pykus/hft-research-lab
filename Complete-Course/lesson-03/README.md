@@ -236,7 +236,7 @@ std::atomic<int> counter{0};
 
 void worker() {
     for (int i = 0; i < 100'000; ++i) {
-        counter += 1;
+        counter += 1; // Atomic increment: safe with multiple threads.
     }
 }
 
@@ -252,7 +252,7 @@ int main() {
 }
 ```
 
-`std::atomic<int>` overloads `+=`, so `counter += 1` is an atomic read-modify-write operation, even when multiple threads execute it concurrently. Unlike `fetch_add(1, std::memory_order_relaxed)`, this shorthand uses the default sequentially consistent ordering (`std::memory_order_seq_cst`). Both approaches are correct for this independent counter. The `join()` calls ensure the workers finish before the final read. We will explain memory ordering in a later lesson.
+`std::atomic<int>` makes `counter += 1` safe when multiple threads increment the same counter. Each increment happens as one atomic operation, so no increments are lost. The `join()` calls wait for both threads to finish before printing the result.
 
 ## 11. Exercises
 
