@@ -8,6 +8,8 @@ A practical, incremental course built around the **real source code** in this re
 | --- | --- | --- |
 | 01 | C++ order model, validation, and debugging | [Lesson](lesson-01/README.md) · [Exercises](lesson-01/EXERCISES.md) |
 | 02 | References, pointers, and object lifetime | [Lesson and exercises](lesson-02/README.md) |
+| 03 | Processes and threads in C++20 | [Lesson](lesson-03/README.md) |
+| 04 | Memory layout, cache lines, and data-oriented design | [Lesson](lesson-04/README.md) |
 
 ## Learning workflow
 
